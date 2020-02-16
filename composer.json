@@ -5,6 +5,7 @@
         "components/jquery": "~3.3",
         "jquery-form/form": "~4.2",
         "components/jqueryui": "~1.12",
+        "components/jquery-cookie": "1.4.*",
         "guzzle/guzzle": "3.*"
     },
     "scripts": {
@@ -12,7 +13,9 @@
             "rsync -av vendor/codeigniter/framework/system/ DocumentRoot/system/",
             "rsync -av vendor/codeigniter/framework/index.php DocumentRoot/index.php",
             "rsync -av vendor/twbs/bootstrap/fonts/ DocumentRoot/assets/fonts/",
-            "chmod -R 755 system/"
+            "rsync -av vendor/components DocumentRoot/assets/js/",
+            "rsync -av vendor/jquery-form DocumentRoot/assets/js/",
+            "chmod -R 755 DocumentRoot/system/"
         ],
         "deploy-application":          [ "@deploy-htaccess"],
         "deploy-htaccess":             [ "@remove_windows_linefeed", "/bin/sh scripts/deploy-htaccess.sh" ],

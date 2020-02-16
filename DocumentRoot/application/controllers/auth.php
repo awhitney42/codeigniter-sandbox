@@ -38,7 +38,7 @@ $session_data = array(
 );
 // Add user data in session
 $this->session->set_userdata('logged_in', $session_data);
-header("Location: /" . base_url() . "dashboard");
+header("Location: " . base_url() . "dashboard");
 } else {
 $data = array(
 'error_message' => 'Invalid Username or Password'

@@ -1,3 +1,6 @@
 vendor
 composer.lock
+DocumentRoot/.htaccess
+DocumentRoot/assets/js/components
+DocumentRoot/assets/js/jquery-form
 
