@@ -9,10 +9,10 @@ Here is repository for a CodeIgniter 3 sandbox application, running in a Dockeri
 1. Assuming you are able to run the dockerized Apache on port 80 and MySQL on port 3306 on your local machine, proceed to build and run the Docker container using the following command: docker-compose up
 1. Verify the docker containers are running with: docker ps
 1. From the root directory of this repositority, run the following commands:
-1.  composer install
-1.  composer update
-1.  composer deploy-application
+1. composer install
+1. composer update
+1. composer deploy-application
 
 ## Application Sandbox
-1. Point your browser at http://localhost. If the above command were successful, you should see a login page.
+1. Point your browser at http://localhost. If the above commands were successful, you should see a login page.
 1. Go ahead and login. No real security is yet implemented in this sandbox, so you should be able to log in regardless of the credentials you provide.
