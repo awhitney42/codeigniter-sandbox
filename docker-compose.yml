@@ -1,0 +1,27 @@
+version: '3'
+services:
+    php-apache:
+        image: php:7.3-apache
+        ports:
+            - 80:80
+        volumes:
+            - ./DocumentRoot:/var/www/html
+        links:
+            - 'mariadb'
+        command: |
+            sh -c 'a2enmod rewrite \
+            && apache2-foreground'
+    mariadb:
+        image: mariadb:10.1
+        volumes:
+            - mariadb:/var/lib/mysql
+        environment:
+            TZ: "US/Chicago"
+            MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+            MYSQL_ROOT_PASSWORD: "230548u9gjkfj"
+            MYSQL_USER: 'ci'
+            MYSQL_PASSWORD: '23894tjjfklds'
+            MYSQL_DATABASE: 'ci'
+
+volumes:
+    mariadb:
