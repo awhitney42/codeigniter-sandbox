@@ -1,6 +1,5 @@
 # codeigniter-sandbox
-Here is repository for a CodeIgniter 3 sandbox application, running in a Dockerized LAMP host. It's good if you want to quickly get up and running experimenting with the CodeIgniter PHP framework.
-
+Here is repository for a CodeIgniter 3 sandbox application, running in a Dockerized LAMP host. It's good if you want to quickly get up and running experimenting with the CodeIgniter PHP framework on a local development machine where you might not have Apache or MySQL running.
 
 ## Getting Started
 1. Clone this repository to a local development machine.
