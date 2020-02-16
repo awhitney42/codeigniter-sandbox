@@ -4,7 +4,7 @@
 </head>
 <body>
 <center><font color='red'><?php echo $error_message; ?></font><center>
-<form name="loginForm" method="post" action="/<?php echo base_url(); ?>auth\user_login_process">
+<form name="loginForm" method="post" action="<?php echo base_url(); ?>auth/user_login_process">
 <table width="20%" bgcolor="0099CC" align="center">
 
 <tr>
