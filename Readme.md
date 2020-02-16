@@ -5,6 +5,7 @@ Here is repository for a CodeIgniter 3 sandbox application, running in a Dockeri
 1. Clone this repository to a local development machine.
 1. Install [Docker](https://www.docker.com/) on your local machine.
 1. Install Composer
+1. Edit the two MySQL passwords in docker-compose.yml.
 1. Assuming you are able to run the dockerized Apache on port 80 and MySQL on port 3306 on your local machine, proceed to build and run the Docker container using the following command: docker-compose up
 1. Verify the docker containers are running with: docker ps
 1. From the root directory of this repositority, run the following commands:
