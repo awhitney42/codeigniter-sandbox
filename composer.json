@@ -1,0 +1,27 @@
+{
+    "require": {
+        "codeigniter/framework": "3.1.11",
+        "twbs/bootstrap": "3.4.0",
+        "components/jquery": "~3.3",
+        "jquery-form/form": "~4.2",
+        "components/jqueryui": "~1.12",
+        "guzzle/guzzle": "3.*"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "rsync -av vendor/codeigniter/framework/system/ DocumentRoot/system/",
+            "rsync -av vendor/codeigniter/framework/index.php DocumentRoot/index.php",
+            "rsync -av vendor/twbs/bootstrap/fonts/ DocumentRoot/assets/fonts/",
+            "chmod -R 755 system/"
+        ],
+        "deploy-application":          [ "@deploy-htaccess"],
+        "deploy-htaccess":             [ "@remove_windows_linefeed", "/bin/sh scripts/deploy-htaccess.sh" ],
+        "whereami":                    [ "@remove_windows_linefeed", "/bin/sh scripts/where-am-i.sh" ],
+        "remove_windows_linefeed":
+        [
+            "cd scripts/; for F in *.sh; do G=`echo $F;`; cat $G | sed 's/\\r$//' > $G.unix; done",
+            "cd scripts/; for F in *.unix; do G=`echo $F | sed -e 's/\\.unix//'`; mv $F $G; done "
+        ]
+    }
+}
+
