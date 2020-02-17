@@ -14,5 +14,6 @@ Here is repository for a CodeIgniter 3 sandbox application, running in a Dockeri
 1. composer deploy-application
 
 ## Application Sandbox
+1. The CodeIgniter application sandbox runs with the DocumentRoot directory, which is the document root for the dockerized Apache instance. Edit the application there to experiment with your new CodeIgniter application.
 1. Point your browser at http://localhost. If the above commands were successful, you should see a login page.
 1. Go ahead and login. No real security is yet implemented in this sandbox, so you should be able to log in regardless of the credentials you provide.
