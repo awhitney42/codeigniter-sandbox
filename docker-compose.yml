@@ -9,8 +9,10 @@ services:
         links:
             - 'mariadb'
         command: |
-            sh -c 'a2enmod rewrite \
+            sh -c 'RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli \
+            a2enmod rewrite \
             && apache2-foreground'
+            
     mariadb:
         image: mariadb:10.1
         volumes:
